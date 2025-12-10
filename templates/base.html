@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -10,8 +11,23 @@
 
   <body>
     <header>
-      <h1>CrushMath</h1>
-      <hr />
+      <nav class="navbar">
+        <div class="left-logo">
+          <a href="/">
+            <img src="{% static 'img/로고.png' %}" alt="CrushMath 로고" class="logo-img">
+          </a>
+        </div>
+
+      <div class="nav-center">
+        <a href="#">ASRA</a>
+      </div>
+
+      <div class="nav-right">
+        <a href="#">로그인</a> | <a href="#">회원가입</a>
+      </div>
+    </nav>
+  </header>
+
     </header>
 
     <main>{% block content %} {% endblock %}</main>
